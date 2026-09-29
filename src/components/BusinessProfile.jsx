@@ -12,7 +12,6 @@ function BusinessProfile() {
       id="bus_prof"
       className="relative overflow-hidden bg-slate-200 pb-20 pt-32 text-gray-900 md:pb-28 md:pt-40"
     >
-      {/* Oversized wordmark sitting behind the shoe */}
       <span
         aria-hidden="true"
         className="display pointer-events-none absolute -bottom-[0.18em] right-[-4%] select-none text-[46vw] leading-none text-slate-300 md:text-[34vw]"
