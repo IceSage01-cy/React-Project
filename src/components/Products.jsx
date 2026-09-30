@@ -3,7 +3,6 @@ import products from "../data/Products";
 import ProductCard from "./ProductCard";
 import ProductModal from "./ProductModal";
 
-// Matches the responsive widths below: 2 items on mobile, 2 on sm, 3 on lg
 function getItemsPerView() {
   if (typeof window === "undefined") return 2;
   if (window.innerWidth >= 1024) return 3; // lg
@@ -25,8 +24,6 @@ function Products() {
       ? products
       : products.filter((p) => p.category === selectedCategory);
 
-  // Keep itemsPerView in sync with the viewport, and re-clamp index so
-  // we never scroll past the last full "page" of items.
   useEffect(() => {
     function handleResize() {
       setItemsPerView(getItemsPerView());
@@ -41,8 +38,6 @@ function Products() {
     setIndex((prev) => Math.min(prev, maxIndex));
   }, [maxIndex]);
 
-  // Jump back to the first slide whenever the category changes so the
-  // carousel doesn't stay stuck on an index that no longer makes sense.
   function handleCategoryChange(category) {
     setSelectedCategory(category);
     setIndex(0);

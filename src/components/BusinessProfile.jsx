@@ -44,7 +44,6 @@ function BusinessProfile() {
         </div>
 
         <div className="relative mx-auto w-full max-w-[34rem]">
-          {/* Speed streaks trailing the shoe */}
           <div
             aria-hidden="true"
             className="absolute -left-6 top-[28%] z-0 hidden space-y-3 sm:block"

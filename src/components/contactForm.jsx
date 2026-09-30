@@ -1,5 +1,12 @@
 import { useState } from "react";
 
+const contactInfo = [
+  { label: "Email", value: "hello@movshoes.ph" },
+  { label: "Phone", value: "+63 900 000 0000" },
+  { label: "Location", value: "Philippines (online store)" },
+  { label: "Support hours", value: "Mon–Sat, 9:00 AM – 6:00 PM" },
+];
+
 function ContactForm() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
@@ -26,6 +33,15 @@ function ContactForm() {
             Questions about sizing, a pair you saw, or your order? Send us a
             message and we'll get back to you.
           </p>
+
+          <dl className="mt-8 space-y-4 text-sm">
+            {contactInfo.map((item) => (
+              <div key={item.label} className="border-l-4 border-cyan-500 pl-4">
+                <dt className="font-bold text-cyan-400">{item.label}</dt>
+                <dd className="mt-0.5 text-white/85">{item.value}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
 
         {submitted ? (

@@ -26,7 +26,6 @@ function ShoppingInfo() {
         </p>
 
         <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-[1.1fr_0.8fr_1.1fr]">
-          {/* Size chart */}
           <div className="rounded-3xl bg-white p-7">
             <h3 className="display text-2xl">Size chart</h3>
             <table className="mt-5 w-full text-left text-sm">
@@ -55,8 +54,7 @@ function ShoppingInfo() {
             </p>
           </div>
 
-          {/* Payment methods */}
-          <div className="rounded-3xl bg-gray-900 p-7 text-slate-200">
+         <div className="rounded-3xl bg-gray-900 p-7 text-slate-200">
             <h3 className="display text-2xl">Payment methods</h3>
             <ul className="mt-5 flex flex-wrap gap-2">
               {paymentMethods.map((method) => (
@@ -73,7 +71,6 @@ function ShoppingInfo() {
             </p>
           </div>
 
-          {/* Delivery info */}
           <div className="rounded-3xl bg-white p-7">
             <h3 className="display text-2xl">Delivery info</h3>
             <dl className="mt-5 space-y-4 text-sm">
